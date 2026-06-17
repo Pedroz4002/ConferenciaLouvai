@@ -203,10 +203,11 @@ a {
   display: block;
 }
 
-.hero {
+.hero,
+.movement-hero {
   position: relative;
   min-height: 0;
-  padding: calc(var(--header) + 72px) 32px 112px;
+  padding: calc(var(--header) + 62px) 32px 78px;
   overflow: hidden;
   background:
     linear-gradient(118deg, rgba(13, 15, 12, 0.98) 0%, rgba(21, 20, 15, 0.95) 47%, rgba(29, 51, 42, 0.95) 100%),
@@ -214,7 +215,8 @@ a {
   color: var(--white);
 }
 
-.hero::before {
+.hero::before,
+.movement-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -225,19 +227,28 @@ a {
   pointer-events: none;
 }
 
-.hero-shell {
+.movement-hero {
+  background:
+    linear-gradient(118deg, rgba(13, 15, 12, 0.98) 0%, rgba(20, 23, 17, 0.96) 48%, rgba(29, 51, 42, 0.95) 82%, rgba(75, 57, 26, 0.68) 100%),
+    var(--ink);
+}
+
+.hero-shell,
+.movement-shell {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-  gap: 64px;
+  grid-template-columns: minmax(0, 600px) minmax(300px, 420px);
+  gap: clamp(44px, 7vw, 86px);
   align-items: center;
+  justify-content: space-between;
   max-width: var(--max);
-  min-height: calc(86vh - var(--header));
+  min-height: calc(74vh - var(--header));
   margin: 0 auto;
 }
 
-.hero-media {
+.hero-media,
+.movement-logo-wrap {
   justify-self: end;
   width: min(100%, 420px);
   padding: 16px;
@@ -249,20 +260,23 @@ a {
 
 .hero-media img,
 .movement-logo-wrap img {
+  width: 100%;
   border-radius: 8px;
 }
 
-.hero-content {
+.hero-content,
+.movement-copy {
   position: relative;
   z-index: 1;
-  width: min(790px, 100%);
+  justify-self: start;
+  width: min(600px, 100%);
   margin: 0;
 }
 
 .eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--gold);
-  font-size: 0.79rem;
+  font-size: 0.8rem;
   font-weight: 900;
   line-height: 1.4;
   text-transform: uppercase;
@@ -271,18 +285,19 @@ a {
 .hero h1,
 .movement-copy h1 {
   margin: 0;
-  font-size: 4.8rem;
-  line-height: 0.98;
+  max-width: 560px;
+  font-size: clamp(3.85rem, 5.1vw, 4.65rem);
+  line-height: 1;
   text-wrap: balance;
 }
 
 .hero-copy,
 .movement-copy p {
-  max-width: 650px;
+  max-width: 610px;
   margin: 26px 0 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.2rem;
-  line-height: 1.75;
+  font-size: 1.13rem;
+  line-height: 1.72;
 }
 
 .hero-actions,
@@ -300,7 +315,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   max-width: var(--max);
-  margin: 48px auto 0;
+  margin: 46px auto 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(13, 15, 12, 0.68);
   backdrop-filter: blur(14px);
@@ -604,51 +619,12 @@ p {
   color: var(--muted);
 }
 
-.movement-hero {
-  min-height: 0;
-  padding: calc(var(--header) + 70px) 32px 92px;
-  background:
-    linear-gradient(125deg, #0d0f0c 0%, #171611 42%, #1d332a 74%, #4b391a 100%),
-    var(--ink);
-  color: var(--white);
-}
-
-.movement-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 440px);
-  gap: 64px;
-  align-items: center;
-  max-width: var(--max);
-  min-height: calc(82vh - var(--header));
-  margin: 0 auto;
-}
-
-.movement-copy,
-.movement-logo-wrap {
-  width: min(100%, 560px);
-}
-
-.movement-copy {
-  justify-self: start;
-}
-
-.movement-logo-wrap {
-  justify-self: end;
-  width: min(100%, 440px);
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: rgba(3, 5, 3, 0.66);
-  box-shadow: var(--shadow);
-}
-
 .movement-logo-wrap img {
-  width: 100%;
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .movement-strip {
-  margin-top: 44px;
+  margin-top: 46px;
 }
 
 .comparison-grid {
@@ -856,7 +832,8 @@ p {
     padding: 0 18px;
   }
 
-  .hero {
+  .hero,
+  .movement-hero {
     min-height: auto;
     padding: calc(var(--header) + 52px) 22px 70px;
   }
@@ -868,8 +845,15 @@ p {
     min-height: auto;
   }
 
-  .hero-media {
+  .hero-content,
+  .movement-copy,
+  .hero-media,
+  .movement-logo-wrap {
     justify-self: center;
+  }
+
+  .hero-media,
+  .movement-logo-wrap {
     width: min(100%, 360px);
     max-width: none;
   }
@@ -924,16 +908,6 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .movement-hero {
-    min-height: auto;
-    padding: calc(var(--header) + 54px) 22px 72px;
-  }
-
-  .movement-copy,
-  .movement-logo-wrap {
-    justify-self: center;
-  }
-
   .footer-bar {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -963,14 +937,10 @@ p {
     padding: 58px 20px;
   }
 
-  .hero {
-    padding-top: calc(var(--header) + 36px);
-    padding-bottom: 38px;
-  }
-
+  .hero,
   .movement-hero {
     padding-top: calc(var(--header) + 36px);
-    padding-bottom: 42px;
+    padding-bottom: 40px;
   }
 
   .hero-shell,
@@ -1011,12 +981,8 @@ p {
 
   .hero-media,
   .movement-logo-wrap {
-    width: min(100%, 240px);
+    width: min(100%, 248px);
     padding: 10px;
-  }
-
-  .movement-logo-wrap {
-    width: min(100%, 258px);
   }
 
   .hero-strip {
