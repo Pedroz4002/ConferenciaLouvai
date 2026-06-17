@@ -4,7 +4,9 @@ Site estático da Conferência Louvai, com uma aba principal para a conferência
 
 ## Publicação
 
-O projeto está pronto para GitHub Pages. O workflow em `.github/workflows/pages.yml` publica o conteúdo da raiz do repositório sempre que houver push na branch `main`.
+O projeto está pronto para GitHub Pages pelo modo mais simples: publicar a branch `main` a partir da pasta raiz (`/`). Depois de habilitado em **Settings > Pages**, o site fica disponível em:
+
+`https://pedroz4002.github.io/ConferenciaLouvai/`
 
 ## Personalização rápida
 
