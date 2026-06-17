@@ -10,15 +10,14 @@
     <meta name="theme-color" content="#0d0f0c" />
     <title>Conferência Louvai</title>
     <link rel="icon" href="assets/conferencia-louvai-logo.png" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
     <script defer src="vendor/lucide/lucide.min.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#inicio" aria-label="Voltar ao início da Conferência Louvai">
-        <img src="assets/conferencia-louvai-logo.png" alt="Logomarca da Conferência Louvai" />
-        <span>Conferência Louvai</span>
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <img src="assets/louvai-logo.png" alt="Louvai" />
       </a>
 
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
@@ -26,12 +25,14 @@
       </button>
 
       <nav class="site-nav" aria-label="Navegação principal" data-nav>
-        <button class="nav-tab is-active" type="button" data-tab-target="conferencia">
-          Conferência Louvai
-        </button>
-        <button class="nav-tab" type="button" data-tab-target="movimento">
-          Movimento Louvai
-        </button>
+        <div class="site-nav-main">
+          <button class="nav-tab is-active" type="button" data-tab-target="conferencia">
+            Conferência
+          </button>
+          <button class="nav-tab" type="button" data-tab-target="movimento">
+            Movimento
+          </button>
+        </div>
         <a class="nav-link" href="#doacao">
           <i data-lucide="heart-handshake"></i>
           Contribuir
@@ -442,7 +443,7 @@
     <footer class="site-footer">
       <div class="footer-bar">
         <a class="footer-brand" href="#inicio" aria-label="Voltar ao início">
-          <img src="assets/louvai-wordmark.png" alt="Louvai" />
+          <img src="assets/louvai-logo.png" alt="Louvai" />
         </a>
         <nav class="footer-nav" aria-label="Links do rodapé">
           <button type="button" data-tab-target="conferencia">Conferência</button>

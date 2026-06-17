@@ -66,13 +66,14 @@ a {
   top: 0;
   left: 0;
   z-index: 20;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: 26px;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: var(--header);
   padding: 0 32px;
-  background: rgba(13, 15, 12, 0.86);
+  background: rgba(10, 11, 9, 0.92);
   color: var(--white);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(18px);
@@ -81,27 +82,31 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   min-width: 0;
   text-decoration: none;
-  font-weight: 800;
 }
 
 .brand img {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.brand span {
-  white-space: nowrap;
+  width: 190px;
+  height: 58px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .site-nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  justify-self: end;
+  width: min(100%, 920px);
+  gap: 30px;
+}
+
+.site-nav-main {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 36px;
 }
 
 .nav-tab,
@@ -109,28 +114,29 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 42px;
-  padding: 0 16px;
+  min-height: 46px;
+  padding: 0;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 8px;
   background: transparent;
   color: inherit;
   font: inherit;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 .nav-tab.is-active {
-  background: rgba(216, 161, 61, 0.17);
-  border-color: rgba(216, 161, 61, 0.58);
   color: var(--gold-bright);
 }
 
 .nav-link {
-  background: var(--gold);
-  color: var(--ink);
+  justify-content: center;
+  padding: 0 22px;
+  border: 2px solid var(--gold);
+  color: var(--white);
 }
 
 .nav-toggle {
@@ -806,25 +812,31 @@ p {
   }
 
   .site-header {
+    grid-template-columns: minmax(130px, 170px) auto;
+    gap: 16px;
     padding: 0 18px;
   }
 
-  .brand span {
-    display: none;
+  .brand img {
+    width: 158px;
+    height: 52px;
   }
 
   .nav-toggle {
     display: inline-flex;
+    justify-self: end;
   }
 
   .site-nav {
     position: absolute;
     top: var(--header);
-    right: 18px;
     left: 18px;
+    right: auto;
     display: none;
     flex-direction: column;
     align-items: stretch;
+    justify-self: auto;
+    width: calc(100% - 36px);
     padding: 12px;
     background: rgba(13, 15, 12, 0.96);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -832,9 +844,16 @@ p {
     box-shadow: var(--shadow);
   }
 
+  .site-nav-main {
+    flex-direction: column;
+    gap: 0;
+  }
+
   .nav-tab,
   .nav-link {
     justify-content: center;
+    width: 100%;
+    padding: 0 18px;
   }
 
   .hero {
