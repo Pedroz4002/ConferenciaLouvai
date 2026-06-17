@@ -486,6 +486,33 @@ p {
   color: rgba(255, 255, 255, 0.84);
 }
 
+.movement-bridge {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+  max-width: var(--max);
+  margin: 34px auto 0;
+  padding: 26px;
+  border: 1px solid rgba(216, 161, 61, 0.3);
+  border-radius: 8px;
+  background: rgba(6, 8, 6, 0.42);
+}
+
+.movement-bridge span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.movement-bridge p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.84);
+}
+
 .donation-panel {
   padding: 38px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -614,6 +641,10 @@ p {
   box-shadow: var(--shadow);
 }
 
+.movement-strip {
+  margin-top: 44px;
+}
+
 .comparison-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -646,13 +677,12 @@ p {
 
 .site-footer {
   background:
-    linear-gradient(180deg, #090a08 0%, #0f130e 100%),
+    linear-gradient(180deg, #0a0b09 0%, #10140f 100%),
     #090a08;
   color: rgba(255, 255, 255, 0.82);
 }
 
-.footer-main,
-.footer-links,
+.footer-bar,
 .footer-bottom {
   max-width: var(--max);
   margin: 0 auto;
@@ -660,85 +690,98 @@ p {
   padding-left: 32px;
 }
 
-.footer-main {
+.footer-bar {
   display: grid;
-  grid-template-columns: minmax(150px, 0.4fr) minmax(260px, 1fr) auto;
-  gap: 34px;
+  grid-template-columns: minmax(180px, 250px) minmax(0, 1fr) auto;
+  gap: 30px;
   align-items: center;
-  padding-top: 54px;
-  padding-bottom: 38px;
+  min-height: 112px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-wordmark {
-  color: var(--gold-bright);
-  font-size: 2.25rem;
-  font-weight: 950;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.footer-main p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.7;
-}
-
-.footer-whatsapp {
+.footer-brand {
   display: flex;
   align-items: center;
+  width: min(100%, 240px);
+  min-width: 0;
+}
+
+.footer-brand img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-nav,
+.footer-actions {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav {
   justify-content: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 0 18px;
-  border: 1px solid rgba(216, 161, 61, 0.38);
-  border-radius: 8px;
-  color: var(--white);
-  font-weight: 900;
-  text-decoration: none;
-  white-space: nowrap;
+  gap: 34px;
 }
 
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  padding-top: 34px;
-  padding-bottom: 34px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.footer-actions {
+  justify-content: flex-end;
+  gap: 14px;
 }
 
-.footer-links div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links span {
-  color: var(--gold-bright);
-  font-size: 0.78rem;
-  font-weight: 950;
-  text-transform: uppercase;
-}
-
-.footer-links button,
-.footer-links a {
-  width: max-content;
+.footer-nav button,
+.footer-nav a {
   padding: 0;
   border: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--white);
   font: inherit;
-  font-weight: 750;
-  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 900;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.footer-links button:hover,
-.footer-links a:hover,
-.footer-wordmark:hover,
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 950;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-whatsapp {
+  display: inline-grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(216, 161, 61, 0.54);
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-whatsapp svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.footer-nav button:hover,
+.footer-nav a:hover,
+.footer-cta:hover,
 .footer-whatsapp:hover {
   color: var(--gold-bright);
 }
@@ -872,19 +915,35 @@ p {
     justify-self: center;
   }
 
-  .footer-main {
+  .footer-bar {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding-top: 44px;
-    padding-bottom: 30px;
+    justify-items: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
-  .footer-whatsapp {
-    width: max-content;
+  .footer-brand {
+    width: 220px;
+  }
+
+  .footer-nav,
+  .footer-actions {
+    justify-content: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 18px 28px;
   }
 }
 
 @media (max-width: 640px) {
+  .section,
+  .section-contact {
+    padding: 58px 20px;
+  }
+
   .hero {
     padding-top: calc(var(--header) + 36px);
     padding-bottom: 38px;
@@ -945,6 +1004,13 @@ p {
     display: none;
   }
 
+  .movement-bridge {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    text-align: left;
+  }
+
   .feature-grid,
   .feature-grid.compact,
   .timeline,
@@ -957,30 +1023,52 @@ p {
   .timeline article,
   .comparison-grid article {
     min-height: auto;
+    padding: 22px;
+  }
+
+  .feature-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .feature-card h3 {
+    margin-top: 0;
+  }
+
+  .feature-card p {
+    display: none;
+  }
+
+  .timeline span {
+    margin-bottom: 18px;
   }
 
   .donation-panel {
     padding: 24px;
   }
 
-  .footer-main,
-  .footer-links,
+  .footer-bar,
   .footer-bottom {
     padding-right: 22px;
     padding-left: 22px;
   }
 
-  .footer-wordmark {
-    font-size: 1.9rem;
+  .footer-brand {
+    width: 190px;
+  }
+
+  .footer-nav {
+    gap: 14px 18px;
+  }
+
+  .footer-nav button,
+  .footer-nav a {
+    font-size: 0.82rem;
   }
 
   .footer-whatsapp {
-    width: 100%;
-  }
-
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    width: 46px;
   }
 
   .footer-bottom {

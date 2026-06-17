@@ -19,5 +19,5 @@ O projeto está pronto para GitHub Pages pelo modo mais simples: publicar a bran
 - `index.html`: conteúdo e abas do site.
 - `styles.css`: identidade visual, layout responsivo e componentes.
 - `script.js`: alternância de abas, menu mobile e botão de PIX.
-- `assets/`: logomarcas da Conferência Louvai e do Movimento Louvai.
+- `assets/`: logomarcas da Conferência Louvai, do Movimento Louvai e recorte `louvai-wordmark.png` usado no rodapé.
 - `vendor/lucide/`: biblioteca local de ícones usada na interface.
