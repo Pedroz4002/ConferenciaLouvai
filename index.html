@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#0d0f0c" />
     <title>Conferência Louvai</title>
     <link rel="icon" href="assets/conferencia-louvai-logo.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
     <script defer src="vendor/lucide/lucide.min.js"></script>
     <script defer src="script.js"></script>
   </head>
@@ -42,25 +42,27 @@
     <main>
       <section class="tab-panel is-active" id="conferencia" data-tab-panel>
         <section class="hero" id="inicio">
-          <div class="hero-media" aria-hidden="true">
-            <img src="assets/conferencia-louvai-logo.png" alt="" />
-          </div>
-          <div class="hero-content">
-            <p class="eyebrow">Palavra. Louvor. Comunhão. Missão.</p>
-            <h1>Conferência Louvai</h1>
-            <p class="hero-copy">
-              Um encontro para proclamar Cristo, fortalecer a igreja e reunir a cidade em adoração.
-              O objetivo principal é simples e eterno: a glória de Deus.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#doacao">
-                <i data-lucide="heart-handshake"></i>
-                Quero ajudar
-              </a>
-              <a class="button button-secondary" href="#proposito">
-                <i data-lucide="arrow-down"></i>
-                Conhecer a proposta
-              </a>
+          <div class="hero-shell">
+            <div class="hero-content">
+              <p class="eyebrow">Palavra. Louvor. Comunhão. Missão.</p>
+              <h1>Conferência Louvai</h1>
+              <p class="hero-copy">
+                Um encontro para proclamar Cristo, fortalecer a igreja e reunir a cidade em adoração.
+                O objetivo principal é simples e eterno: a glória de Deus.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#doacao">
+                  <i data-lucide="heart-handshake"></i>
+                  Quero ajudar
+                </a>
+                <a class="button button-secondary" href="#proposito">
+                  <i data-lucide="arrow-down"></i>
+                  Conhecer a proposta
+                </a>
+              </div>
+            </div>
+            <div class="hero-media">
+              <img src="assets/conferencia-louvai-logo.png" alt="Logomarca da Conferência Louvai" />
             </div>
           </div>
           <div class="hero-strip" aria-label="Pilares da Conferência Louvai">
@@ -124,9 +126,9 @@
               <p>Pessoas de fora somando com ensino, testemunho, música e serviço cristão.</p>
             </article>
             <article class="feature-card">
-              <i data-lucide="hand-heart"></i>
-              <h3>Serviço</h3>
-              <p>Voluntários, mantenedores e parceiros ajudando a tornar o encontro possível.</p>
+              <i data-lucide="shield-check"></i>
+              <h3>Cuidado</h3>
+              <p>Uma equipe dedicada à organização, recepção e apoio durante toda a conferência.</p>
             </article>
           </div>
         </section>
@@ -144,7 +146,7 @@
             <article>
               <span>01</span>
               <h3>Convocação</h3>
-              <p>Mobilização de igrejas, voluntários e pessoas que desejam apoiar a visão.</p>
+              <p>Mobilização de igrejas, parceiros e pessoas que desejam apoiar a visão.</p>
             </article>
             <article>
               <span>02</span>
@@ -171,21 +173,26 @@
               <h2>Ajude a Conferência Louvai a sair do papel.</h2>
               <p>
                 Sua contribuição ajuda a preparar um encontro gratuito, acolhedor e bem organizado,
-                com foco em Palavra, louvor, evangelismo e serviço à igreja.
+                com foco em Palavra, louvor, evangelismo e edificação da igreja.
               </p>
             </div>
             <div class="donation-panel">
               <h3>Seja um mantenedor</h3>
               <p>
-                Você pode apoiar com oferta única, contribuição recorrente, serviço voluntário ou
-                parceria local.
+                Você pode apoiar com oferta única, contribuição recorrente ou parceria local para
+                tornar essa visão possível.
               </p>
               <div class="donation-actions">
                 <button class="button button-dark" type="button" data-copy-pix>
                   <i data-lucide="copy"></i>
                   Copiar chave PIX
                 </button>
-                <a class="button button-outline" href="#contato">
+                <a
+                  class="button button-outline"
+                  href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20falar%20com%20a%20equipe%20do%20Louvai."
+                  target="_blank"
+                  rel="noopener"
+                >
                   <i data-lucide="message-circle"></i>
                   Falar com a equipe
                 </a>
@@ -202,7 +209,7 @@
             </article>
             <article>
               <i data-lucide="route"></i>
-              <span>Logística de convidados e voluntários</span>
+              <span>Logística de convidados e estrutura</span>
             </article>
             <article>
               <i data-lucide="badge-check"></i>
@@ -232,14 +239,14 @@
               <summary>A conferência será gratuita?</summary>
               <p>
                 A intenção é viabilizar um encontro acessível e sustentado por mantenedores,
-                parceiros e voluntários.
+                parceiros e doações.
               </p>
             </details>
             <details>
               <summary>Como posso contribuir?</summary>
               <p>
-                Você pode apoiar financeiramente, servir como voluntário, divulgar a proposta ou
-                conectar a organização com parceiros da cidade.
+                Você pode apoiar financeiramente, divulgar a proposta ou conectar a organização com
+                parceiros da cidade.
               </p>
             </details>
             <details>
@@ -257,14 +264,19 @@
             <p class="eyebrow">Contato</p>
             <h2>Vamos construir essa história juntos.</h2>
             <p>
-              Para doações, parcerias, voluntariado, caravanas ou apoio ministerial, fale com a
-              organização da Conferência Louvai.
+              Para doações, parcerias, caravanas ou apoio ministerial, fale com a organização da
+              Conferência Louvai pelo WhatsApp.
             </p>
           </div>
           <div class="contact-actions">
-            <a class="button button-primary" href="mailto:?subject=Quero%20apoiar%20a%20Confer%C3%AAncia%20Louvai">
-              <i data-lucide="mail"></i>
-              Preparar e-mail
+            <a
+              class="button button-primary"
+              href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20falar%20com%20a%20equipe%20da%20Confer%C3%AAncia%20Louvai."
+              target="_blank"
+              rel="noopener"
+            >
+              <i data-lucide="message-circle"></i>
+              Chamar no WhatsApp
             </a>
             <button class="button button-secondary" type="button" data-tab-target="movimento">
               <i data-lucide="sparkles"></i>
@@ -276,26 +288,33 @@
 
       <section class="tab-panel" id="movimento" data-tab-panel>
         <section class="movement-hero">
-          <div class="movement-copy">
-            <p class="eyebrow">Jesus é o centro</p>
-            <h1>Movimento Louvai</h1>
-            <p>
-              Encontros menores pela cidade, com comunhão, aprendizado da Palavra, louvor simples
-              e uma proposta evangelística para aproximar pessoas de Cristo.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#movimento-proposta">
-                <i data-lucide="arrow-down"></i>
-                Conhecer o movimento
-              </a>
-              <a class="button button-secondary" href="#movimento-participe">
-                <i data-lucide="users-round"></i>
-                Participar
-              </a>
+          <div class="movement-shell">
+            <div class="movement-copy">
+              <p class="eyebrow">Jesus é o centro</p>
+              <h1>Movimento Louvai</h1>
+              <p>
+                Encontros menores pela cidade, com comunhão, aprendizado da Palavra, louvor simples
+                e uma proposta evangelística para aproximar pessoas de Cristo.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#movimento-proposta">
+                  <i data-lucide="arrow-down"></i>
+                  Conhecer o movimento
+                </a>
+                <a
+                  class="button button-secondary"
+                  href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Movimento%20Louvai."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i data-lucide="message-circle"></i>
+                  Quero conversar
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="movement-logo-wrap">
-            <img src="assets/movimento-louvai-logo.jpeg" alt="Logomarca do Movimento Louvai" />
+            <div class="movement-logo-wrap">
+              <img src="assets/movimento-louvai-logo.jpeg" alt="Logomarca do Movimento Louvai" />
+            </div>
           </div>
         </section>
 
@@ -380,12 +399,17 @@
             <p class="eyebrow">Participe</p>
             <h2>Leve o Movimento Louvai para perto de pessoas.</h2>
             <p>
-              Quem deseja abrir espaço, servir, ensinar, louvar ou receber um encontro pode falar
-              com a organização e caminhar junto nessa proposta.
+              Quem deseja receber um encontro, abrir espaço para comunhão ou entender melhor a
+              proposta pode falar com a organização.
             </p>
           </div>
           <div class="contact-actions">
-            <a class="button button-primary" href="#contato">
+            <a
+              class="button button-primary"
+              href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20o%20Movimento%20Louvai."
+              target="_blank"
+              rel="noopener"
+            >
               <i data-lucide="message-circle"></i>
               Quero conversar
             </a>
@@ -399,16 +423,48 @@
     </main>
 
     <footer class="site-footer">
-      <div>
-        <img src="assets/conferencia-louvai-logo.png" alt="Conferência Louvai" />
-        <p>Adorar é viver o propósito. A glória de Deus é o nosso alvo.</p>
+      <div class="footer-main">
+        <a class="footer-wordmark" href="#inicio" aria-label="Voltar ao início">Louvai</a>
+        <p>
+          Adorar é viver o propósito. A Conferência e o Movimento caminham para o mesmo centro:
+          a glória de Deus.
+        </p>
+        <a
+          class="footer-whatsapp"
+          href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20falar%20com%20a%20equipe%20do%20Louvai."
+          target="_blank"
+          rel="noopener"
+        >
+          <i data-lucide="message-circle"></i>
+          +55 83 9960-2007
+        </a>
       </div>
-      <nav aria-label="Links do rodapé">
-        <button type="button" data-tab-target="conferencia">Conferência</button>
-        <button type="button" data-tab-target="movimento">Movimento</button>
-        <a href="#doacao">Doações</a>
-        <a href="#perguntas">Perguntas</a>
-      </nav>
+      <div class="footer-links">
+        <div>
+          <span>Site</span>
+          <button type="button" data-tab-target="conferencia">Conferência</button>
+          <button type="button" data-tab-target="movimento">Movimento</button>
+        </div>
+        <div>
+          <span>Apoie</span>
+          <a href="#doacao">Doações</a>
+          <a href="#perguntas">Perguntas</a>
+        </div>
+        <div>
+          <span>Contato</span>
+          <a
+            href="https://wa.me/558399602007?text=Ol%C3%A1%21%20Quero%20falar%20com%20a%20equipe%20do%20Louvai."
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Louvai</span>
+        <span>Palavra, louvor, comunhão e missão.</span>
+      </div>
     </footer>
   </body>
 </html>

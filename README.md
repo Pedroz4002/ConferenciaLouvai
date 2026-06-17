@@ -11,7 +11,7 @@ O projeto está pronto para GitHub Pages pelo modo mais simples: publicar a bran
 ## Personalização rápida
 
 - Atualize a chave PIX oficial em `script.js`, na constante `donationPixKey`.
-- Ajuste e-mail, WhatsApp, data, local e redes sociais em `index.html` quando a organização confirmar esses dados.
+- Ajuste WhatsApp, data, local e redes sociais em `index.html` quando a organização confirmar esses dados.
 - Substitua as imagens em `assets/` se novas versões das logomarcas forem criadas.
 
 ## Estrutura
